@@ -52,7 +52,7 @@ This package is an internal implementation of the .NET Core SDK and is not meant
 
     <!-- Produce crossgen profiling symbols (.ni.pdb or .map files). -->
     <GenerateCrossgenProfilingSymbols>true</GenerateCrossgenProfilingSymbols>
-    <GenerateCrossgenProfilingSymbols Condition=" '$(CrossgenOutput)' == 'false' OR '$(TargetOsName)' == 'osx'">false</GenerateCrossgenProfilingSymbols>
+    <GenerateCrossgenProfilingSymbols Condition=" '$(CrossgenOutput)' == 'false' OR '$(TargetOsName)' == 'osx' OR '$(TargetOsName)' == 'freebsd'">false</GenerateCrossgenProfilingSymbols>
 
     <!-- Always generated, even though output type == Library -->
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>

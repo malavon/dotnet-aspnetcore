@@ -115,6 +115,7 @@ and are generated based on the last package release.
     <LatestPackageReference Include="microsoft.netcore.app.runtime.linux-arm64" Version="$(MicrosoftNETCoreAppRuntimeVersion)" />
     <LatestPackageReference Include="microsoft.netcore.app.runtime.linux-musl-x64" Version="$(MicrosoftNETCoreAppRuntimeVersion)" />
     <LatestPackageReference Include="microsoft.netcore.app.runtime.linux-musl-arm64" Version="$(MicrosoftNETCoreAppRuntimeVersion)" />
+    <LatestPackageReference Include="microsoft.netcore.app.runtime.freebsd-x64" Version="$(MicrosoftNETCoreAppRuntimeVersion)" />
   </ItemGroup>
 
   <ItemGroup Label=".NET team dependencies (Non-source-build)" Condition="'$(DotNetBuildFromSource)' != 'true'">

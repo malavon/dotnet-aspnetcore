@@ -107,6 +107,7 @@
     <TargetOsName Condition=" '$(TargetOsName)' == '' AND $([MSBuild]::IsOSPlatform('Windows'))">win</TargetOsName>
     <TargetOsName Condition=" '$(TargetOsName)' == '' AND $([MSBuild]::IsOSPlatform('OSX'))">osx</TargetOsName>
     <TargetOsName Condition=" '$(TargetOsName)' == '' AND $([MSBuild]::IsOSPlatform('Linux'))">linux</TargetOsName>
+    <TargetOsName Condition=" '$(TargetOsName)' == '' AND $([MSBuild]::IsOSPlatform('FreeBSD'))">freebsd</TargetOsName>
     <TargetArchitecture Condition="'$(TargetArchitecture)' == ''">x64</TargetArchitecture>
     <TargetRuntimeIdentifier>$(TargetOsName)-$(TargetArchitecture)</TargetRuntimeIdentifier>
 
@@ -121,7 +122,8 @@
       linux-musl-arm64;
       linux-x64;
       linux-arm;
-      linux-arm64
+      linux-arm64;
+      freebsd-x64;
     </SupportedRuntimeIdentifiers>
 
     <!-- Make error messages clickable in VS Code's console -->
